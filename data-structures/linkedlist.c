@@ -22,18 +22,17 @@ int main(void)
 	/* Insert element*/
 	/* Insert element at the end - Push */
 	ls_push(&head, "data one");
-	printf("%s\n", head->data);
-
-	/* Go to next node */
-	head = head->next;
-
 	ls_push(&head, "data two");
-	printf("%s\n", head->data);
-
+	ls_push(&head, "data three");
 	/* Insert element at the head */
 	/* Insert element at the middle */
 
 	/* List all elements*/
+	while(head != NULL)
+	{
+		printf("%s\n", head->data);
+		head = head->next;
+	}
 	return (0);
 }
 
@@ -45,8 +44,9 @@ int ls_push(__attribute__((unused)) ls_t **head, __attribute__((unused)) char *d
 	new_node = malloc(sizeof(ls_t));
 
 	new_node->data = data;
+	new_node->next = NULL;
 
-	/* Attach node to end */
+	/* Attach new node to end of linked list */
 	/* First add */
 	if (*head == NULL)
 		*head = new_node;
