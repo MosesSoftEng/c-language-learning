@@ -9,3 +9,7 @@ typedef struct linkedlist_s
 } ls_t;
 
 /* Define main function */
+int main(void)
+{
+	return (0);
+}
