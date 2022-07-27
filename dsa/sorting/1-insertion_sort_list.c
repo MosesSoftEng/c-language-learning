@@ -51,6 +51,10 @@ void insertion_sort_list(
 				c->next = p;
 				c->prev = p->prev;
 
+				/* Set ne head */
+				if (c->prev == NULL)
+					*list = c;
+
 				if (p_prev)
 					p_prev->next = c;
 
@@ -62,9 +66,7 @@ void insertion_sort_list(
 				p = c->prev;
 			}
 			else
-			{
 				p = p->prev;
-			}
 		}
 		puts("");
 
