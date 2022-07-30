@@ -13,7 +13,8 @@
  * 2.   Loop backwards, from previous element from current
  * 3.       if previous element > current element
  * 4.			stitch up current element location
- * 5.			insert current before previous
+ * 5.			insert current before previous if previous is head make current
+ * 					head
  */
 
 void insertion_sort_list(
